@@ -23,7 +23,7 @@ class SongsStatsController extends AbstractController implements TokenAuthContro
     }
 
     /**
-     * Gets current playing status from Spotify
+     * Gets song stats for a song id from Spotify
      *
      * @param Request $request HTTP Request
      * @return JsonResponse Json response

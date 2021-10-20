@@ -21,9 +21,9 @@ class SpotifyCredentialTest extends TestCase
     public function testItCreatesFromApiResponse()
     {
         $apiResponse = [
-            'access_token' => $this->faker->md5,
+            'access_token' => $this->faker->md5(),
             'expires_in' => 3600,
-            'refresh_token' => $this->faker->md5
+            'refresh_token' => $this->faker->md5()
         ];
 
         $credentials = SpotifyCredentials::fromApiResponse(
@@ -43,10 +43,10 @@ class SpotifyCredentialTest extends TestCase
     public function testItCreatesFromUserToken()
     {
         $userToken = new UserToken();
-        $userToken->setAccessToken($this->faker->md5);
+        $userToken->setAccessToken($this->faker->md5());
         $now = new DateTime();
         $userToken->setExpiresIn($now->modify('+3600 seconds'));
-        $userToken->setRefreshToken($this->faker->md5);
+        $userToken->setRefreshToken($this->faker->md5());
 
         $credentials = SpotifyCredentials::fromUserToken($userToken);
 

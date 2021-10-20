@@ -31,7 +31,7 @@
         "symfony/yaml": "5.3.*"
     },
     "require-dev": {
-        "fzaninotto/faker": "^1.9",
+        "fakerphp/faker": "^1.16",
         "phpunit/phpunit": "^9",
         "squizlabs/php_codesniffer": "*",
         "symfony/maker-bundle": "^1.34"
